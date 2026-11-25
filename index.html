@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Потапов Максим — Не верьте в мой потенциал. Дайте ему работу</title>
+    <meta name="description" content="Максим Алексеевич Потапов — амбициозный человек, готовый начинать с практической работы в команде депутата или руководителя. Не верьте в мой потенциал. Дайте ему работу.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="Потапов Максим — Дайте потенциалу работу">
+    <meta property="og:description" content="Личный манифест Максима Потапова: начать с задачи, заслужить доверие, доказать ценность результатом.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23090909'/%3E%3Ctext x='32' y='48' font-family='Arial,sans-serif' font-weight='900' font-size='44' text-anchor='middle' fill='%23F5F4F0'%3E%D0%9F%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap&subset=cyrillic" rel="stylesheet">
+    <script>document.documentElement.classList.add('js')</script>
+    <style>
+        :root {
+            --k: #090909;
+            --w: #F5F4F0;
+            --r: #E63232;
+            --g: #6b6a66;
+            --pad: clamp(1.1rem,4vw,4rem);
+            --nav: 56px
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--nav);
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            background: var(--w);
+            color: var(--k);
+            font: 400 clamp(1rem,1.1vw,1.15rem)/1.65 Manrope,"Helvetica Neue",Arial,sans-serif;
+            overflow-x: clip
+        }
+
+        a {
+            color: inherit
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--r);
+            outline-offset: 3px
+        }
+
+        h1, h2, .big, .th, .hl {
+            font-weight: 800;
+            text-transform: uppercase;
+            overflow-wrap: break-word
+        }
+
+        h2 {
+            font-size: clamp(1.9rem,6vw,6.2rem);
+            line-height: .98;
+            letter-spacing: -.035em
+        }
+        /* nav */
+        header {
+            position: fixed;
+            inset: 0 0 auto;
+            height: var(--nav);
+            background: var(--k);
+            color: var(--w);
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 var(--pad)
+        }
+
+        .brand {
+            font-weight: 800;
+            letter-spacing: .14em;
+            text-decoration: none;
+            font-size: .9rem
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2.2rem;
+            list-style: none
+        }
+
+        nav a {
+            font-weight: 600;
+            font-size: .74rem;
+            letter-spacing: .12em;
+            text-decoration: none;
+            padding: .5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color .2s
+        }
+
+            nav a:hover {
+                border-color: var(--r)
+            }
+
+        .burger {
+            display: none;
+            background: none;
+            border: 0;
+            color: var(--w);
+            font: 800 .74rem Manrope,sans-serif;
+            letter-spacing: .12em;
+            padding: .7rem 0;
+            cursor: pointer
+        }
+
+        #bar {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 100%;
+            background: var(--r);
+            transform: scaleX(0);
+            transform-origin: left
+        }
+
+        @media(max-width:800px) {
+            .burger {
+                display: block
+            }
+
+            nav ul {
+                display: none;
+                position: fixed;
+                top: var(--nav);
+                left: 0;
+                right: 0;
+                background: var(--k);
+                flex-direction: column;
+                gap: 0;
+                padding: .5rem var(--pad) 1.5rem;
+                border-top: 1px solid #333
+            }
+
+            header.open nav ul {
+                display: flex
+            }
+
+            nav li a {
+                display: block;
+                padding: 1rem 0;
+                font-size: 1.1rem;
+                border-bottom: 1px solid #2a2a2a
+            }
+        }
+        /* hero */
+        .hero {
+            position: relative;
+            min-height: 100svh;
+            padding: calc(var(--nav) + 1.6rem) var(--pad) 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-bottom: 1px solid var(--k)
+        }
+
+        .cap {
+            font-weight: 800;
+            font-size: clamp(.7rem,1vw,.85rem);
+            letter-spacing: .2em
+        }
+
+        .name {
+            display: block;
+            font-size: 17vw;
+            line-height: .82;
+            letter-spacing: -.045em;
+            margin: clamp(.8rem,3vh,2rem) 0 0 -.03em;
+            position: relative;
+            z-index: 1
+        }
+
+        .ln {
+            display: block;
+            width: max-content;
+            white-space: nowrap
+        }
+
+        .figure {
+            position: absolute;
+            right: calc(var(--pad)*.7);
+            bottom: 0;
+            z-index: 2
+        }
+
+            .figure img {
+                display: block;
+                height: min(80svh,66vw);
+                width: auto;
+                filter: drop-shadow(4px 0 0 var(--w)) drop-shadow(-4px 0 0 var(--w)) drop-shadow(0 -4px 0 var(--w))
+            }
+
+        .hero-copy {
+            position: relative;
+            z-index: 3;
+            max-width: min(48rem,54%);
+            margin-top: auto;
+            padding: 2.5rem 0 var(--pad)
+        }
+
+        .hl {
+            font-size: clamp(1.5rem,2.9vw,3rem);
+            line-height: 1.04;
+            letter-spacing: -.025em
+        }
+
+        .hero-copy .hl {
+            color: var(--k)
+        }
+
+        .hero-copy p {
+            margin: 1.1rem 0 1.8rem;
+            max-width: 33rem;
+            color: #33322f
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 1.05rem 1.7rem;
+            background: var(--k);
+            color: var(--w);
+            border: 2px solid var(--k);
+            font-family: inherit;
+            font-weight: 800;
+            font-size: .82rem;
+            letter-spacing: .1em;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background .2s,border-color .2s,transform .2s
+        }
+
+            .btn:not(.off):hover {
+                background: var(--r);
+                border-color: var(--r);
+                transform: translateY(-2px)
+            }
+
+            .btn.off {
+                background: transparent;
+                color: var(--k);
+                border-style: dashed;
+                cursor: not-allowed
+            }
+
+            .btn.lt {
+                background: var(--w);
+                color: var(--k);
+                border-color: var(--w)
+            }
+
+        .lnk {
+            margin-left: 1.6rem;
+            font-weight: 800;
+            font-size: .8rem;
+            letter-spacing: .1em;
+            text-decoration: none;
+            border-bottom: 2px solid var(--k);
+            padding: .3rem 0;
+            display: inline-block;
+            transition: color .2s,border-color .2s
+        }
+
+            .lnk:hover {
+                color: var(--r);
+                border-color: var(--r)
+            }
+
+        @media(max-width:800px) {
+            .figure {
+                position: relative;
+                right: auto;
+                align-self: flex-end;
+                margin: -5vw -2vw 0 0
+            }
+
+                .figure img {
+                    height: 44svh
+                }
+
+            .hero-copy {
+                max-width: 100%;
+                padding-top: 1.4rem
+            }
+
+            .lnk {
+                margin: 1.3rem 0 0;
+                display: table
+            }
+        }
+
+        .js .in {
+            animation: up .8s cubic-bezier(.2,.7,.2,1) both;
+            animation-delay: var(--d,0s)
+        }
+
+        @keyframes up {
+            from {
+                opacity: 0;
+                transform: translateY(28px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+        /* sections */
+        .sec {
+            padding: clamp(4rem,9vw,8rem) var(--pad);
+            position: relative
+        }
+
+        .dark {
+            background: var(--k);
+            color: var(--w)
+        }
+
+            .dark .body {
+                margin-left: auto;
+                max-width: 40rem
+            }
+
+        .body p + p {
+            margin-top: 1.2em
+        }
+
+        .lead {
+            font-weight: 800;
+            font-size: 1.35em;
+            line-height: 1.3
+        }
+
+        .strong {
+            font-weight: 800;
+            font-size: 1.15em;
+            line-height: 1.35
+        }
+
+        .big {
+            display: block;
+            font-size: 8vw;
+            line-height: .95;
+            letter-spacing: -.045em;
+            margin-top: clamp(3.5rem,8vw,7rem)
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: clamp(2rem,5vw,4rem)
+        }
+
+        @media(min-width:900px) {
+            .split {
+                grid-template-columns: 1.25fr 1fr;
+                align-items: start
+            }
+        }
+
+        .quote {
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: clamp(1.5rem,4.4vw,4.6rem);
+            line-height: 1;
+            letter-spacing: -.035em;
+            margin-top: clamp(4rem,9vw,8rem);
+            padding-top: 1.4rem;
+            border-top: 1px solid #444;
+            overflow-wrap: break-word
+        }
+
+            .quote em {
+                font-style: normal;
+                color: var(--r)
+            }
+        /* tasks */
+        .row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: .6rem;
+            padding: 1.6rem 0;
+            border-top: 1px solid var(--k)
+        }
+
+            .row:last-of-type {
+                border-bottom: 1px solid var(--k)
+            }
+
+            .row b {
+                font-weight: 800;
+                font-size: clamp(2.2rem,5vw,4.5rem);
+                line-height: .9;
+                letter-spacing: -.04em;
+                transition: color .2s
+            }
+
+            .row:hover b {
+                color: var(--r)
+            }
+
+            .row h3 {
+                font-weight: 800;
+                font-size: clamp(1.2rem,2.2vw,2rem);
+                line-height: 1.1;
+                letter-spacing: -.02em;
+                text-transform: uppercase
+            }
+
+            .row p {
+                color: #33322f;
+                max-width: 32rem
+            }
+
+        @media(min-width:900px) {
+            .row {
+                grid-template-columns: 7rem 1.1fr 1fr;
+                gap: 2rem;
+                align-items: start;
+                padding: 2.2rem 0
+            }
+        }
+
+        .note-end {
+            margin: clamp(2.5rem,5vw,4rem) 0 1.5rem;
+            font-weight: 800;
+            font-size: clamp(1.15rem,2vw,1.7rem);
+            line-height: 1.3;
+            max-width: 48rem
+        }
+
+        .reader {
+            position: relative;
+            border-bottom: 3px solid var(--k)
+        }
+
+            .reader img {
+                display: block;
+                width: 100%;
+                height: auto;
+                margin-bottom: -1px
+            }
+
+        @media(min-width:900px) {
+            .reader .note-end {
+                position: absolute;
+                left: 0;
+                top: 2.2rem;
+                max-width: 36%;
+                margin: 0
+            }
+        }
+        /* why */
+        .th {
+            font-size: clamp(1.6rem,6.8vw,7.6rem);
+            line-height: .92;
+            letter-spacing: -.045em;
+            border-top: 1px solid var(--k);
+            padding: 1.2rem 0 1.6rem
+        }
+
+            .th span {
+                display: block
+            }
+
+            .th:last-child {
+                border-bottom: 1px solid var(--k)
+            }
+
+        @media(min-width:900px) {
+            .th:nth-child(2) {
+                padding-left: 10vw
+            }
+
+            .th:nth-child(3) {
+                padding-left: 20vw
+            }
+        }
+
+        .js .rv {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);
+            transition-delay: var(--d,0s)
+        }
+
+            .js .rv.on {
+                opacity: 1;
+                transform: none
+            }
+
+        .theses {
+            margin-top: clamp(3rem,7vw,6rem)
+        }
+        /* ambition */
+        .cols {
+            margin-top: clamp(2.5rem,5vw,4rem)
+        }
+
+        @media(min-width:900px) {
+            .cols {
+                columns: 2;
+                column-gap: 4rem
+            }
+
+                .cols p {
+                    break-inside: avoid
+                }
+        }
+
+        .cols p {
+            margin-bottom: 1.2em
+        }
+        /* final */
+        .fin {
+            font-size: clamp(2rem,8.4vw,9.5rem);
+            line-height: .92;
+            letter-spacing: -.05em
+        }
+
+        .three {
+            margin-top: clamp(3.5rem,7vw,6rem)
+        }
+
+            .three p {
+                font-weight: 800;
+                text-transform: uppercase;
+                font-size: clamp(1.3rem,3.6vw,3.4rem);
+                line-height: 1.05;
+                letter-spacing: -.03em;
+                padding: .9rem 0 1rem;
+                border-top: 1px solid #444
+            }
+
+                .three p:last-child {
+                    color: var(--r)
+                }
+        /* contact */
+        .tagline {
+            font-weight: 800;
+            font-size: clamp(1.3rem,2.8vw,2.6rem);
+            line-height: 1.1;
+            letter-spacing: -.025em;
+            margin-top: clamp(1.5rem,3vw,2.5rem)
+        }
+
+        .cn {
+            margin: 1.6rem 0 2.2rem;
+            max-width: 42rem
+        }
+
+        footer {
+            padding: 1.6rem var(--pad);
+            border-top: 1px solid var(--k);
+            font-size: .8rem;
+            color: var(--g);
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap
+        }
+        /* modal */
+        .modal {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: rgba(9,9,9,.72);
+            backdrop-filter: blur(4px);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .2s,visibility .2s
+        }
+
+            .modal.open {
+                opacity: 1;
+                visibility: visible
+            }
+
+        .modal-box {
+            width: 100%;
+            max-width: 440px;
+            background: var(--w);
+            color: var(--k);
+            border: 2px solid var(--k);
+            padding: 1.8rem;
+            position: relative;
+            transform: translateY(14px);
+            transition: transform .2s
+        }
+
+        .modal.open .modal-box {
+            transform: none
+        }
+
+        .modal-hd {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 1rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid var(--k)
+        }
+
+            .modal-hd h3 {
+                font-weight: 800;
+                font-size: 1.35rem;
+                letter-spacing: -.02em;
+                text-transform: uppercase
+            }
+
+        .modal-x {
+            background: none;
+            border: 0;
+            color: var(--k);
+            font-size: 1.9rem;
+            line-height: 1;
+            cursor: pointer;
+            padding: .1rem .4rem;
+            transition: color .2s
+        }
+
+            .modal-x:hover {
+                color: var(--r)
+            }
+
+        .clist {
+            display: flex;
+            flex-direction: column;
+            gap: .8rem
+        }
+
+        .citem {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: .95rem 1.1rem;
+            border: 1px solid var(--k);
+            text-decoration: none;
+            transition: background .2s,color .2s,border-color .2s
+        }
+
+            .citem:hover {
+                background: var(--k);
+                color: var(--w);
+                border-color: var(--k)
+            }
+
+        .cico {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color .2s
+        }
+
+        .citem:hover .cico {
+            color: var(--r)
+        }
+
+        .ctxt {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.25;
+            min-width: 0
+        }
+
+        .clbl {
+            font-size: .7rem;
+            font-weight: 800;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--g);
+            transition: color .2s
+        }
+
+        .citem:hover .clbl {
+            color: #bbb
+        }
+
+        .cval {
+            font-size: 1rem;
+            font-weight: 800;
+            overflow-wrap: anywhere
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important
+            }
+
+            .js .rv {
+                opacity: 1 !important;
+                transform: none !important
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="hd">
+        <a class="brand" href="#top">ПОТАПОВ</a>
+        <nav aria-label="Основная навигация">
+            <button class="burger" id="bg" aria-expanded="false" aria-controls="menu">МЕНЮ</button>
+            <ul id="menu">
+                <li><a href="#manifest">МОЙ ПОДХОД</a></li>
+                <li><a href="#tasks">ЗАДАЧИ</a></li>
+                <li><a href="#ambition">АМБИЦИИ</a></li>
+                <li><a href="#contact">КОНТАКТ</a></li>
+            </ul>
+        </nav>
+        <div id="bar" aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <section class="hero" id="top">
+            <p class="cap in" style="--d:.05s">МАКСИМ АЛЕКСЕЕВИЧ ПОТАПОВ</p>
+            <h1 class="name in" data-fit style="--d:.15s"><span class="ln">ПОТАПОВ</span></h1>
+            <div class="figure in" style="--d:.35s"><img src="3131.png" alt="Максим Потапов в белой рубашке показывает рукой на зрителя"></div>
+            <div class="hero-copy">
+                <p class="hl in" style="--d:.3s;margin:0;max-width:none">НЕ ВЕРЬТЕ В МОЙ ПОТЕНЦИАЛ. ДАЙТЕ ЕМУ РАБОТУ</p>
+                <p class="in" style="--d:.45s">Готов войти в команду, брать на себя задачи и доказывать свою ценность результатом</p>
+                <div class="in" style="--d:.55s"><a class="btn" href="#contact">ОБСУДИТЬ СОТРУДНИЧЕСТВО</a><a class="lnk" href="#manifest">ПОЧЕМУ Я ЗДЕСЬ ↓</a></div>
+            </div>
+        </section>
+
+        <section class="sec" id="manifest">
+            <h2>Я не ищу место.<br>Я ищу задачу, которую нужно решить</h2>
+            <div class="body" style="margin-top:clamp(2.5rem,5vw,4rem)">
+                <p class="lead">Я — Максим Алексеевич Потапов.</p>
+                <p>Я хочу работать там, где принимаются решения. Там, где цена ошибки высока, время ограничено, а результат важнее всего.</p>
+                <p>Мне нужна возможность оказаться внутри серьёзной работы, увидеть её изнутри и доказать свою ценность делом.</p>
+                <p class="strong">Дайте мне задачу. Не обещание. Не привилегию. Задачу.</p>
+                <p>Я готов начинать с простого: работать с документами, структурировать информацию, готовить материалы, искать решения, организовывать процессы, помогать команде и постепенно брать на себя больше ответственности.</p>
+            </div>
+            <p class="big" data-fit aria-label="Дайте мне задачу"><span class="ln" aria-hidden="true">ДАЙТЕ МНЕ ЗАДАЧУ</span></p>
+        </section>
+
+        <section class="sec dark" id="motivation">
+            <div class="split">
+                <h2>Мне не нужно платить за мою мотивацию</h2>
+                <div>
+                    <p>Я готов обсуждать безвозмездный формат сотрудничества на старте, чтобы получить возможность проявить себя, заслужить доверие и доказать свою полезность.</p>
+                    <p style="margin-top:1.2em">Ради опыта, ответственности, результата и возможности стать частью команды, в которой действительно происходит что-то значимое.</p>
+                    <p class="strong" style="margin-top:1.2em">Мне не нужны гарантии успеха. Мне нужен шанс его заслужить.</p>
+                </div>
+            </div>
+            <p class="quote">Пока другие спрашивают, что они получат, я спрашиваю: <em>чем я могу быть полезен?</em></p>
+        </section>
+
+        <section class="sec" id="tasks" style="padding-bottom:0">
+            <h2 style="margin-bottom:clamp(2.5rem,6vw,5rem)">Что я готов делать</h2>
+            <div>
+                <div class="row"><b aria-hidden="true">01</b><h3>Документы и информация</h3><p>Работа с файлами, структурирование информации, подготовка и проверка материалов, поиск данных, систематизация документов.</p></div>
+                <div class="row"><b aria-hidden="true">02</b><h3>Аналитика и подготовка</h3><p>Изучение незнакомых вопросов, поиск источников, выделение главного, составление справок и подготовка материалов для принятия решений.</p></div>
+                <div class="row"><b aria-hidden="true">03</b><h3>Коммуникация</h3><p>Подготовка переписки, организация контактов, формулирование позиции, сопровождение коммуникаций и помощь в подготовке к встречам и переговорам.</p></div>
+                <div class="row"><b aria-hidden="true">04</b><h3>Организация</h3><p>Работа с задачами и сроками, фиксация договорённостей, организация процессов и контроль исполнения поручений.</p></div>
+                <div class="row"><b aria-hidden="true">05</b><h3>Новые задачи</h3><p>Готовность осваивать новые инструменты, погружаться в незнакомые направления и последовательно расширять круг ответственности.</p></div>
+            </div>
+            <div class="reader">
+                <p class="note-end">Я не утверждаю, что знаю абсолютно всё. Я готов учиться необходимому, глубоко погружаться в работу и отвечать за порученный результат.</p>
+                <img src="6678668.png" alt="Максим Потапов читает книгу" loading="lazy">
+            </div>
+        </section>
+
+        <section class="sec why" id="why">
+            <h2>Вам не нужен ещё один человек в штате</h2>
+            <div class="body" style="margin-top:clamp(2.5rem,5vw,4rem)">
+                <p>Вам нужен человек, которому можно поставить задачу и понимать, что она не растворится между совещаниями, переписками и обещаниями.</p>
+                <p>Человек, который умеет слушать, фиксировать детали, задавать вопросы, держать информацию в порядке и помнить о конечной цели.</p>
+                <p class="strong">Я не прошу доверять мне авансом. Я хочу создать основания для доверия.</p>
+            </div>
+            <div class="theses">
+                <p class="th rv"><span>Сначала —</span><span>польза.</span></p>
+                <p class="th rv" style="--d:.1s"><span>Затем —</span><span>ответственность.</span></p>
+                <p class="th rv" style="--d:.2s"><span>Дальше —</span><span>результат.</span></p>
+            </div>
+        </section>
+
+        <section class="sec" id="ambition">
+            <h2>Мои амбиции больше, чем моя должность</h2>
+            <div class="cols">
+                <p class="lead">Я намерен развиваться и расти над собой.</p>
+                <p>Но я не хочу начинать этот путь с громких заявлений.</p>
+                <p><strong>Я хочу начать с работы.</strong></p>
+                <p>С понимания того, как устроены процессы, как готовятся решения, как выстраивается взаимодействие между людьми и как идеи превращаются в конкретные действия.</p>
+                <p>Я готов учиться у людей, которые уже прошли этот путь. Начинать с практических задач, наблюдать, анализировать, спрашивать и делать выводы.</p>
+                <p class="strong">Я не хочу выглядеть человеком, который способен на многое. Я хочу стать человеком, который действительно способен на многое.</p>
+            </div>
+        </section>
+
+        <section class="sec dark" id="finale">
+            <h2 class="fin">Старт снизу - это не поражение</h2>
+            <div class="body" style="margin-top:clamp(3rem,6vw,5rem)">
+                <p>Меня не пугает отсутствие громкого названия должности. Меня пугает перспектива однажды обнаружить, что амбиции так и остались разговорами.</p>
+                <p class="strong">Поэтому я выбираю работу.</p>
+                <p>Не требую особого отношения. Не рассчитываю на мгновенное признание. Не обещаю невозможного.</p>
+                <p>Я готов войти в команду с одной целью: стать человеком, чьё присутствие облегчает работу, а вклад со временем становится очевидным.</p>
+            </div>
+            <div class="three">
+                <p>Один разговор.</p>
+                <p>Одна задача.</p>
+                <p>Один результат, который можно оценить.</p>
+            </div>
+        </section>
+
+        <section class="sec" id="contact">
+            <p class="name" data-fit style="margin:0;font-weight:800;text-transform:uppercase" aria-hidden="true"><span class="ln">ПОТАПОВ</span></p>
+            <p class="tagline">Не верьте в мой потенциал. Дайте ему работу.</p>
+            <p class="cn">Если вам нужен человек, готовый начинать с конкретных задач, глубоко погружаться в работу, учиться и последовательно доказывать свою состоятельность — давайте проверим это на практике.</p>
+            <button type="button" class="btn" id="cbtn">СВЯЗАТЬСЯ СО МНОЙ</button>
+        </section>
+    </main>
+    <footer><span>© 2026 Максим Алексеевич Потапов</span><a href="#top">Наверх</a></footer>
+
+    <div class="modal" id="cmodal" role="dialog" aria-modal="true" aria-labelledby="cmtitle" aria-hidden="true">
+        <div class="modal-box">
+            <div class="modal-hd">
+                <h3 id="cmtitle">Контакты</h3>
+                <button type="button" class="modal-x" id="cmclose" aria-label="Закрыть">×</button>
+            </div>
+            <div class="clist">
+                <a class="citem" id="c-phone" href="tel:+79655241556">
+                    <span class="cico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                    </span>
+                    <span class="ctxt">
+                        <span class="clbl">Телефон</span>
+                        <span class="cval">+7 965 524-15-56</span>
+                    </span>
+                </a>
+                <a class="citem" id="c-email" href="mailto:max.hotapov9@mail.ru">
+                    <span class="cico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                    </span>
+                    <span class="ctxt">
+                        <span class="clbl">Почта</span>
+                        <span class="cval">max.hotapov9@mail.ru</span>
+                    </span>
+                </a>
+                <a class="citem" id="c-tg" href="https://t.me/Pampers_Trubach_9" target="_blank" rel="noopener noreferrer">
+                    <span class="cico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z" /></svg>
+                    </span>
+                    <span class="ctxt">
+                        <span class="clbl">Telegram</span>
+                        <span class="cval">@Pampers_Trubach_9</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+const CONTACT = {
+         phone: "+7 965 524-15-56",
+         email: "max.hotapov9@mail.ru",
+         telegram: "@Pampers_Trubach_9"
+};
+
+(function(){
+         var p=document.getElementById("c-phone"),
+             e=document.getElementById("c-email"),
+             t=document.getElementById("c-tg");
+         if(p&&CONTACT.phone){
+          p.href="tel:"+CONTACT.phone.replace(/[^\d+]/g,"");
+          p.querySelector(".cval").textContent=CONTACT.phone;
+         }
+         if(e&&CONTACT.email){
+          e.href="mailto:"+CONTACT.email;
+          e.querySelector(".cval").textContent=CONTACT.email;
+         }
+         if(t&&CONTACT.telegram){
+          var u=CONTACT.telegram.replace(/^@/,"");
+          t.href="https://t.me/"+u;
+          t.querySelector(".cval").textContent="@"+u;
+         }
+})();
+
+var cbtn=document.getElementById("cbtn"),
+            cmodal=document.getElementById("cmodal"),
+            cmclose=document.getElementById("cmclose");
+
+function toggleModal(open){
+         if(!cmodal)return;
+         cmodal.classList.toggle("open",open);
+         cmodal.setAttribute("aria-hidden",!open);
+         document.body.style.overflow=open?"hidden":"";
+}
+if(cbtn)cbtn.onclick=function(){toggleModal(true)};
+if(cmclose)cmclose.onclick=function(){toggleModal(false)};
+if(cmodal)cmodal.onclick=function(e){if(e.target===cmodal)toggleModal(false)};
+
+var hd=document.getElementById("hd"),bg=document.getElementById("bg"),bar=document.getElementById("bar");
+function menu(o){hd.classList.toggle("open",o);bg.setAttribute("aria-expanded",o);bg.textContent=o?"ЗАКРЫТЬ":"МЕНЮ"}
+bg.onclick=function(){menu(!hd.classList.contains("open"))};
+document.querySelectorAll("#menu a").forEach(function(a){a.onclick=function(){menu(false)}});
+document.addEventListener("keydown",function(e){
+         if(e.key==="Escape"){menu(false);toggleModal(false)}
+});
+
+var tk=false;
+function prog(){var m=document.documentElement.scrollHeight-innerHeight;bar.style.transform="scaleX("+(m>0?Math.min(1,scrollY/m):0)+")";tk=false}
+addEventListener("scroll",function(){if(!tk){tk=true;requestAnimationFrame(prog)}},{passive:true});
+
+function fit(){document.querySelectorAll("[data-fit]").forEach(function(el){
+         el.style.fontSize="100px";var w=0;
+         el.querySelectorAll(".ln").forEach(function(l){w=Math.max(w,l.getBoundingClientRect().width)});
+         var cw=el.parentElement.clientWidth-parseFloat(getComputedStyle(el.parentElement).paddingLeft)-parseFloat(getComputedStyle(el.parentElement).paddingRight);
+         if(w>0)el.style.fontSize=(100*cw/w*.985)+"px"})}
+fit();addEventListener("resize",fit);addEventListener("load",fit);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+
+var rv=document.querySelectorAll(".rv");
+if("IntersectionObserver" in window){
+         var io=new IntersectionObserver(function(es){
+          es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})
+         },{threshold:.1});
+         rv.forEach(function(n){io.observe(n)});
+}else{
+         rv.forEach(function(n){n.classList.add("on")});
+}
+prog();
+    </script>
+</body>
+</html>
